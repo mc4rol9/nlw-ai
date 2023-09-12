@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch src/server.ts"
+    "dev": "tsx watch src/server.ts",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:studio": "prisma studio"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +18,7 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
+    "@prisma/client": "5.2.0",
     "fastify": "^4.23.0"
   }
 }
