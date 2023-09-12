@@ -1,11 +1,12 @@
-import { fastify } from 'fastify'
+import { fastify } from "fastify"
+import { getAllPromptsRoute } from "./routes/get-all-prompts"
 
 const app = fastify()
 
-app.get('/', () => {
-    return 'Hi there'
-})
+app.register(getAllPromptsRoute)
 
-app.listen({
+app
+  .listen({
     port: 3333,
-}).then(() => console.log('Server is running'))
+  })
+  .then(() => console.log("Server is running"))
