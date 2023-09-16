@@ -5,12 +5,16 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsx watch src/server.ts",
+    "prisma:seed": "prisma db seed",
     "prisma:migrate": "prisma migrate dev",
     "prisma:studio": "prisma studio"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  },
   "devDependencies": {
     "@types/node": "^20.6.0",
     "dotenv": "^16.3.1",
